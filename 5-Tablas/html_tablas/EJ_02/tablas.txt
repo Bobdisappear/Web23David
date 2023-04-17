@@ -1,0 +1,18 @@
+Crea una tabla como la de la imagen.
+
+Ten en cuenta las etiquetas <caption>, <thead> y <tbody>
+
+Puedes usar el estilo siguiente para que se vea mejor:
+<style>
+    table{
+        border-collapse:collapse;
+        caption-side: bottom;
+    }
+    caption{
+        font-weight:bold;
+        margin-top:16px;
+    }
+    th,td{padding:5px 10px;}
+    td,th{border:1px solid #1c1c1c;text-align:center;}
+
+</style>

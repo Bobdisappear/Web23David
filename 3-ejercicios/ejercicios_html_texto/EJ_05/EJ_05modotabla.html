@@ -1,0 +1,153 @@
+<!-- Dados los siguientes caracteres a continuación escribe su equivalente mediante el nombre HTML.
+
+En caso de no existir un nombre HTML usa el número HTML.
+
+<--; < >  &  ' "  backslash   /  copyright, nonbreaking space, € -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJ_05Caracteres</title>
+    <style>
+        titulo { color: rgb(0, 238, 52);  }
+        p { color: white; }
+        thead {color:rgb(255, 255, 255)}
+        tbody {color:rgba(255, 255, 255, 0.753)}
+        .tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+        table, th, td {border: 1px solid rgb(0, 0, 0)}
+    </style>
+</head>
+<body style="background-color: #567895c2;">
+    <p id="titulo">Aqui se muestra una tabla de escritura de caracteres</p>
+   
+   
+      <table style="background-color: #567895;">
+        <thead>
+            <tr>
+                <th>Caracter</th>
+                <th>Escritura html5</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>&lt;</td>
+                <td>
+                    <div class="tooltip">&amp;lt;
+                        <span 
+                            class="tooltiptext">&lt;
+                        </span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>&#45;</td>
+                <td>
+                    <div class="tooltip">&amp;#45"
+                        <span class="tooltiptext">
+                            &#45;
+                        </span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>&#59;</td>
+                <td>&amp;#59</td>
+            </tr>
+            <tr>
+                <td>&gt;</td>
+                <td>&amp;gt;</td>
+            </tr>
+            <tr>
+                <td>&amp;</td>
+                <td>&amp;amp;</td>
+            </tr>
+            <tr>
+                <td>&#39;</td>
+                <td>&amp;#39;</td>
+            </tr>
+            <tr>
+                <td>&quot;</td>
+                <td>&amp;quot;</td>
+            </tr>
+            <tr>
+                <td>&#92;</td>
+                <td>&amp;#92;</td>
+            </tr>
+            <tr>
+                <td>&#47;</td>
+                <td>&amp;#47;</td>
+            </tr>
+            <tr>
+                <td>&copy;</td>
+                <td>&amp;copy;</td>
+            </tr>
+            <tr>
+                <td>&#160;</td>
+                <td>&amp;#160;</td>
+            </tr>
+            <tr>
+                <td>&euro;</td>
+                <td>&amp;euro;</td>
+            </tr>
+
+           
+
+        </tbody>
+   
+
+    </table>
+
+    <ol>
+        <li>Primero</li>
+            <ol>
+                <li>Primero</li>
+                <li>Primero</li>
+                <li>Primero</li>
+            </ol>
+        <li>Primero</li>
+        <li>Primero</li>
+    </ol>
+
+</body>
+</html>

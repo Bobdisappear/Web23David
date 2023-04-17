@@ -1,0 +1,7 @@
+Escribe el html necesario para hacer posible que se visualize el resultado de la imagen.
+
+Observaciones:
+
+El ejercicio está resuelto sin el uso de CSS.
+
+Todas las líneas están resueltas mediante un título <h2>

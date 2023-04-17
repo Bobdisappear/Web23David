@@ -1,0 +1,136 @@
+
+html{
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+
+  }
+  
+
+  html, body {
+      background: #000;
+      height: 100%; 
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      font-family: 'Poppins'
+  }
+  .anuncios{
+    position:fixed;
+    border-inline-start: 500px;
+    width: 100px;
+    height: 300px;
+    top: 10%;
+    
+
+  }
+  .background {
+      position: relative;
+      height:100%;
+      width:100%;
+      margin: 0 auto;
+  }
+    .background:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index:1;
+      display:block;
+      height:90%;
+      width:100%;
+      opacity: 1; 
+      background:url('fondo.jpg') no-repeat;
+      background-position:0;
+      -webkit-transition:all 1s ease;
+      -moz-transition:all 1s ease;
+      -o-transition:all 1s ease;
+      transition:all 1s ease;
+    }
+      .background:hover:before {
+        background-position: -50px;
+        opacity: .19;
+      }
+      
+    .background div {
+      position: relative;
+      z-index:5;
+      color: #fff;
+      font-weight: lighter;
+      position: relative;
+      left: 20%;
+      top: 30%;
+      width: 60%;
+    }
+ 
+  .btn {
+    border: 2px solid #fff;
+    outline: 0;
+    padding: 10px 15px;
+    cursor: pointer;
+      border-radius: 4px;
+      min-width: 170px;
+      display: inline-block;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+  }
+    .btn.btn-ghost {
+      color: #fff;
+      background: transparent;
+     
+    }
+
+    a {
+        font: arial; 
+        font-size: 20px;
+        color: rgb(199, 196, 196);
+        transition-duration: 250ms;
+    }
+    
+    a:hover, a:active{
+        font-size: 22px;
+        color: #ffffff;
+        cursor:pointer;
+
+    }
+   li{
+    height: 28px;
+   }
+    .left{
+      width: 100px;
+      height: 100px;
+      position: relative;
+      top: 5%;
+      left: 5%;
+      margin: -25px 0 0 -25px;
+    }
+    .right{
+      width: 100px;
+      height: 100px;
+      position: relative;
+      top: 5%;
+      left: 60%;
+      margin: -25px 0 0 -25px;
+    
+    }
+
+    h2{
+      background-color: rgba(220, 215, 250, 0.247);
+    }
+
+    main{
+      position: relative;
+      top: 100px;
+    }
+    footer{
+      position: relative;
+      top: 400px;
+    }
+
+    ol{
+      padding: 30px;
+      height: 100px;
+      width: 700px;
+      column-count: 2;
+    }
+    

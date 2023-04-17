@@ -1,0 +1,82 @@
+<!-- Crea una tabla como la de la imagen.
+
+Ten en cuenta las etiquetas <caption>, <thead> y <tbody>
+
+Puedes usar el estilo siguiente para que se vea mejor:
+<style>
+    table{
+        border-collapse:collapse;
+        caption-side: bottom;
+    }
+    caption{
+        font-weight:bold;
+        margin-top:16px;
+    }
+    th,td{padding:5px 10px;}
+    td,th{border:1px solid #1c1c1c;text-align:center;}
+
+</style> -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ej02Tablas</title>
+    <style>
+        table{
+            border-collapse:collapse;
+            caption-side: bottom;
+        }
+        caption{
+            font-weight:bold;
+            margin-top:16px;
+        }
+        th,td{padding:5px 10px;}
+        td,th{border:1px solid #1c1c1c;text-align:center;}
+        thead{
+            font-weight:bold;
+            margin-top:16px;
+        }
+    
+    </style>
+</head>
+<body>
+<table>
+    <thead>
+        <tr>
+            <td>Ciudad</td>
+            <td>Aeropuerto</td>
+            <td>Playa</td>
+            <td>Habitantes</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Reus</td>
+            <td>Si</td>
+            <td>No</td>
+            <td>100000</td>
+        </tr>
+        <tr>
+            <td>Tarragona</td>
+            <td>No</td>
+            <td>Si</td>
+            <td>130000</td>
+        </tr>
+        <tr>
+            <td>Madrid</td>
+            <td>Si</td>
+            <td>No</td>
+            <td>3100000</td>
+        </tr>
+        <tr>
+            <td>Barcelona</td>
+            <td>Si</td>
+            <td>Si</td>
+            <td>1600000</td>
+        </tr>
+    </tbody>
+    <caption>Este es el caption de la tabla</caption>
+</table>
+</body>
+</html>
