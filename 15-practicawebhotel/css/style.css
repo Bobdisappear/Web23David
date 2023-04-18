@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    line-height: 2rem ;  
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a{
+    color: lightseagreen;
+    text-decoration: none;
+}
+
+h1,h2,h3{
+    margin: auto;
+    
+}
+
+h1{
+    margin-top: 10px;
+    margin-left: 5px;
+}
+
+
+.box1{
+    overflow: auto;
+    max-width: auto;
+    padding: 0px 0;
+    padding-bottom: 0px;
+
+}
+
+#topmenu{
+    background-color: rgb(43, 43, 43);
+}
+
+#topmenu a{
+    text-decoration: none;   
+}
+
+#topmenu h1{
+    float: left;
+}
+
+#topmenu ul{
+    float: right;
+    list-style: none;
+
+}
+
+#topmenu ul li{
+    float: right;
+    margin-right: 20px;
+}
+
+#topmenu ul li a{
+    display: block;
+    padding: 10px;
+    margin: 0px  ;
+    
+}
+
+#topmenu ul li a:hover{
+    background-color: rgba(240, 248, 255, 0.096);
+    border-radius: 5px;
+    color: white;
+    font-size: 1.1rem;
+    
+}
+
+#showcase{
+    height: 00px;
+    background: url('img/showcase.jpg') no-repeat center/cover;
+    transition: 1s ease-in-out;
+    color: aliceblue;
+    text-align: center;
+    padding: 220px;
+
+}
+h2{
+    padding: 10px;
+    font-size: 2rem;
+}
+
+#showcase:hover{
+    height: 500px;
+}
+
+
+.btn{
+    display: block;
+    background-color: black;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px;
+    margin-top: 10px;
+}
+
+.btn:hover{
+    background-color: white;
+    color: black;
+}
+
+#info{
+    overflow: auto;
+    max-width: auto;
+    max-height: auto;
+    background-color: black;
+    
+    
+}
+.foto1{
+    
+    background:url(img/photo-1.jpg);
+    width: 500px ;
+    height: 300px;
+    float: left; 
+    background-image: center , cover;
+}
+.foto2{
+    position: center;
+    color: lightsalmon;
+    text-align: center;
+    margin: 10px;
+    margin-left: 100px;
+    padding: 10px;
+    float: left;
+    
+}
+
+a.btn2{
+    color: aliceblue;
+    display: block;
+    background-color: rgb(39, 39, 39);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    
+}
+
+a.btn2:hover{
+    background-color: aliceblue;
+    color: black;
+}
+
+#fetures{
+    overflow: auto;
+    max-width: auto;
+    max-height: 300px;
+}
+
+.icon1{
+    background-color: lightsalmon;
+    max-width: 400px;
+    height: 300px;
+    padding: 20px;
+    float: left;
+
+}
+.icon2{
+    background-color: lightsteelblue;
+    max-width: 400px;
+    padding: 20px;
+
+    height: 300px;
+    float: left;    
+}
+
+
+.icon3{
+    background-color: lightsteelblue;
+    padding: 20px;
+    
+    max-width: 400px;
+    height: 300px;
+    float: right;    
+}
+
+
+    
+
