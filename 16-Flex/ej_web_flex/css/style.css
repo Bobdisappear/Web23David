@@ -1,0 +1,178 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+header{
+    background: black 100% ;
+    height: 50vh;
+    color: aliceblue;
+    padding: 1rem;
+}
+div.container{
+display: flex;
+align-items: center;
+padding: 0.5rem;
+width: 100%;
+}
+
+.logo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    font-size: larger;
+}
+
+nav.navbar{
+    display: flex;
+    width: 100%;
+}
+ul.nav{
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    
+    
+}
+ul.nav li{
+    list-style-type: none;
+    margin: 0 1rem;
+    
+    
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+    
+}
+
+a:hover{
+   color: rgb(8, 192, 1);
+}
+
+div#showcase{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+}
+
+h1.display-1{
+    padding: 1rem 0;
+    text-align: center;
+}
+
+#showcase p.txt-large{
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 1rem;
+}
+
+span.btnstart{
+    display: flex;
+    justify-content: center;
+    padding:  0.6rem; 
+    
+    
+}
+a.btn.btn-dark{
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    background: rgb(8, 192, 1);
+}
+
+a.btn.btn-dark:hover{
+    background-color: rgb(31, 206, 25);
+    color: rgb(255, 255, 255);
+}
+
+#projects{
+    padding: 1rem;
+}
+
+#projects p.txt-large {
+    text-align: left;
+    font-size: 1.1rem;
+    padding:  1rem 0rem;
+
+}
+div.flex-3{
+    display: flex;
+    flex-direction: column 3;
+    align-items:center ;
+    width: 100%;
+    
+}
+
+div.flex-3-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+}
+
+div.flex-3-box img{
+display: flex;
+align-items: center;
+justify-content:flex-start;
+width: 100%;
+height: 70%;
+border-radius: 1rem;
+}
+
+div.flex-3-box h3{
+    display: flex;
+    align-items: end;
+}
+
+div.flex-3-box p{
+    display: flex;
+    align-items: end;
+}
+
+.bk-color.p-2{
+    background-color: rgb(250, 205, 163);
+}
+
+#benefits{
+    padding: 1rem;
+  
+}
+div.container{
+    display: block;
+}
+section#benefits h2{
+    height: 2rem;
+    margin-bottom: 2rem;
+}
+
+div.flex-3-box p{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+div.benefits-secondary{
+    text-align: center;
+    padding: 3rem;
+}
+
+img.icon{
+    margin-bottom: 1rem ;
+    width: 3rem;
+    height: 3rem;
+}
+
+
+section#contact.container.p-2{
+    margin-top: 1rem;
+    padding: 0rem 2rem;
+}
+
+section#contact.container.p-2 h2{
+    margin-bottom: 1rem;
+}

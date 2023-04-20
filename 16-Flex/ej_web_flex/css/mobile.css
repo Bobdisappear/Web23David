@@ -1,0 +1,24 @@
+
+
+div.flex-3{
+    display: block; 
+     
+}
+
+div.flex-3-box img{
+display: flex;
+
+border-radius: 1rem;
+}
+
+div.flex-3-box h3{
+    display: flex; 
+}
+
+div.container{
+    padding: 0;
+}
+
+div.flex-3-box{
+    padding: 0.3rem 0rem;
+}
