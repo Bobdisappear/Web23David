@@ -16,7 +16,21 @@ align-items: center;
 padding: 0.5rem;
 width: 100%;
 }
-
+button{
+    display:flex;
+    height: 50hv;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: transparent;
+    cursor: pointer;
+    color: inherit;
+    appearance:inherit;
+    font: inherit;
+    border: none;
+    overflow: visible;
+}
 .logo{
     display: flex;
     justify-content: flex-start;
