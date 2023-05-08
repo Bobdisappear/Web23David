@@ -1,4 +1,5 @@
 
-const sent =prompt("Escribe una frase larga")
+const text = prompt("Escribe una frase larga");
+const count = text.split('a').length -1;
 
-write.document(sent.split("a"));
+document.write (count)
