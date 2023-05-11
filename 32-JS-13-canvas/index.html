@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas | minigame</title>
+
+    <style>
+        canvas{
+            border: solid 1px black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Minijuegos con canvas</h1>
+
+    <canvas width="640" height="360" id="mycanvas"></canvas>
+
+    <script>
+
+    const canvas = document.getElementById("mycanvas");
+    const ctx = canvas.getContext('2d')
+    const GAME_HEIGHT = 360;
+    const GAME_WIDHT = 640;
+    const enemies = [
+       
+    {x: 100,
+        y: 100,
+        speedY: 1,
+        w:40,
+        h:40},
+
+        {x: 200,
+        y: 100,
+        speedY: 3,
+        w:40,
+        h:40},
+
+        {x: 360,
+        y: 100,
+        speedY: 4,
+        w:40,
+        h:40},
+
+        {x: 410,
+        y: 100,
+        speedY: 7,
+        w:40,
+        h:40}
+        ]
+    
+        //Jugador
+        const player =
+        {x: 20,
+        y: 150,
+        speedX: 2,
+        w:40,
+        h:40}
+        
+    function draw(){
+
+        ctx.clearRect(0,0,GAME_WIDHT,GAME_HEIGHT)
+        //Seleccionar color
+        ctx.fillStyle = 'lightblue'
+        //Dibujar los enemigos
+        for(let i = 0; i < enemies.length; i++) {
+            const enemy = enemies[i];
+            ctx.fillRect(enemy.x,enemy.y,enemy.w,enemy.h);
+        }
+        // enemies.forEach(function(elements, index){
+        //     console.log(index);
+        // })
+
+        ctx.fillStyle = 'lightgreen'
+        ctx.fillRect(player.x,player.y,player.w,player.h)
+
+    
+    }
+
+    //Mover player
+
+    function update(){
+        player.x += player.speedX;
+        
+    }
+
+    setInterval(function(){
+        
+        draw();
+        update();
+    }, 15);
+    
+    
+    
+    console.log(ctx);
+            
+
+    </script>
+</body>
+</html>
