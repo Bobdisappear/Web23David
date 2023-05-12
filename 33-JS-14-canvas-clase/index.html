@@ -9,7 +9,8 @@
 
     <style>
         canvas {
-            border: solid 1px black;
+            border: solid 3px black;
+            background-color: rgb(76, 151, 151);
         }
     </style>
 </head>
@@ -25,6 +26,7 @@
         const ctx = canvas.getContext('2d')
         const GAME_HEIGHT = 360;
         const GAME_WIDHT = 640;
+        
         const enemies = [
 
             {
@@ -67,7 +69,8 @@
             y: 150,
             speedX: 10,
             w: 40,
-            h: 40
+            h: 40,
+            isMoving: false
         }
 
         function draw() {
@@ -91,16 +94,57 @@
         }
 
         //Mover player & enemies
-        document.getElementById('mycanvas').addEventListener('click',() =>{
+        
+        function movePLayer(){
+            player.isMoving = true
+        }
+        function stopPLayer(){
+            player.isMoving = false
+        }
+
+        canvas.addEventListener('mousedown',movePLayer)
+        canvas.addEventListener('mouseup',stopPLayer)
+
+
+        document.addEventListener('keydown',function(evento){
+            if (evento.keyCode === 32){
+                movePLayer();
+            }
+        });
+
+        document.addEventListener('keyuo',function(evento){
+            if (evento.keyCode === 32){
+                stopPLayer();
+            }
+        });
+        document.addEventListener('keyup',stopPLayer)
+
+        // document.addEventListener("keydown", function() => {});
+        // onkeydown = (movePLayer) => {};
+        
+        function checkCollision(rec1,rec2){
+            const check = rec1.x < rec2.x + rec2.w && 
+                            rec1.x + rec1.w > rec2.x &&
+                            rec1.y < rec2.y + rec2.h &&
+                            rec1.y + rec1.h > rec2.y 
+    
+            return check
+        }
+
+        function update() {
+            if (player.isMoving){
             (player.x += player.speedX)
             if  (player.x >= GAME_WIDHT -player.w || player.x <= 0) {
                 player.speedX = -player.speedX
-            }})
-
-        function update() {
-
+           }}
             for (let i = 0; i < enemies.length; i++) {
+                
                 const enemy = enemies[i];
+                
+                if(checkCollision(player,enemy)){
+                    alert("GAME OVER")
+                }
+                
                 enemy.y += enemy.speedY
                 if (enemy.y >= (GAME_HEIGHT -enemy.h)  || enemy.y <= 0) {
                     enemy.speedY = -enemy.speedY
@@ -108,11 +152,14 @@
             }
         }
         setInterval(function () {
-
+              
             draw();
             update();
         }, 15);
 
+        // setTimeout() =>{
+        //     player.isMoving = true;
+        // }, ;
 
 
         console.log(ctx);
