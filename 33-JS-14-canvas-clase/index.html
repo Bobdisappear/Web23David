@@ -112,7 +112,7 @@
             }
         });
 
-        document.addEventListener('keyuo',function(evento){
+        document.addEventListener('keyup',function(evento){
             if (evento.keyCode === 32){
                 stopPLayer();
             }
@@ -134,16 +134,22 @@
         function update() {
             if (player.isMoving){
             (player.x += player.speedX)
-            if  (player.x >= GAME_WIDHT -player.w || player.x <= 0) {
+            if  (player.x >= GAME_WIDHT || player.x <= 0) {
                 player.speedX = -player.speedX
            }}
             for (let i = 0; i < enemies.length; i++) {
                 
-                const enemy = enemies[i];
-                
+                const enemy = enemies[i]; 
+                const win = player.x >= GAME_WIDHT
                 if(checkCollision(player,enemy)){
-                    alert("GAME OVER")
+                      alert('Game Over') && (player.x = 20);
+                }else if (win){
+                     alert('You Win');
+                }else{
+                    
                 }
+
+                
                 
                 enemy.y += enemy.speedY
                 if (enemy.y >= (GAME_HEIGHT -enemy.h)  || enemy.y <= 0) {
