@@ -9,25 +9,16 @@
 <body>
     
 <h1>Adivina el numero</h1>
-<form action="" method="post">
-    <ul>
-        <li>
-            <label for="num">Numero:</label>
-            <input type="text" id="name" name="num"></input>
-            
-        </li>
-        <li>
 
-        </li>
-       <br>
-        <li class="button">
-            <button type="submit">Enviar</button>
-          </li>
-          
-        </ul>
- 
-</form>
+<div class="resultParas">
+    <p class="guesses"></p>
+    <p class="lastResult"></p>
+    <p class="lowOrHi"></p>
+  </div>
+  <label for="guessField">Adivina el número: </label><input type="text" id="guessField" class="guessField">
+<input type="submit" value="Enviar respuesta" class="guessSubmit">
 
 
+<script src="js/script.js"></script>
 </body>
 </html>
