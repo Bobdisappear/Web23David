@@ -28,16 +28,25 @@ const reviews = [
     job: 'the boss',
     img: 'https://images2.imgbox.com/8b/1c/vwWNTsCd_o.jpeg',
     text: 'Edison bulb put a bird on it humblebrag, marfa pok pok heirloom fashion axe cray stumptown venmo actually seitan. VHS farm-to-table schlitz, edison bulb pop-up 3 wolf moon tote bag street art shabby chic. ',
-  },
+  }, 
 ];
 
-const btns = document.getElementById('button-container');
+// seleccionar botones
+const btns = document.querySelectorAll('.btn')
 
-btns.forEach(function(boton){
-  boton.addEventListener('click', function(change)){
-    const rev = change.currentTarget;
-    if rev.contains()
+//recorrer array de objetos
+const idReviews = reviews.map(function(review){
+  return review
+})
 
+btns.forEach(function(r){
+  const persons = r.currentTarget.id;
 
+  if(persons.contains(Number)){
+    persons++
   }
 })
+
+
+console.log(idReviews);
+

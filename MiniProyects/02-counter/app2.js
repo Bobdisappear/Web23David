@@ -21,6 +21,7 @@ for(let i= 0 ; i<btns.length ; i++){
         }else{
             contador = 0;
         }
+       
     value.textContent = contador
     })
 }
