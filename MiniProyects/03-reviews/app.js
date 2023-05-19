@@ -32,7 +32,10 @@ const reviews = [
 ];
 
 // seleccionar botones
-const btns = document.querySelectorAll('.btn')
+const btns = document.querySelectorAll('.btn');
+
+//elements de bloque
+  // const aut = document.getElementById('autor')
 
 //recorrer array de objetos
 const idReviews = reviews.map(function(review){
@@ -40,13 +43,45 @@ const idReviews = reviews.map(function(review){
 })
 
 btns.forEach(function(r){
-  const persons = r.currentTarget.id;
-
-  if(persons.contains(Number)){
-    persons++
+  r.addEventListener('click', function(a){
+    const change = a.currentTarget.classList;
+    
+    if(change.contains('prev-btn')){
+    aut++
+  } else if (change.contains('next.btn')){
+    
+      
+  } else{
+    Math.random(idReviews)
   }
+ 
+  })
+ 
 })
 
 
-console.log(idReviews);
 
+
+console.log(idReviews);
+//traer las referencias de los elementos del DOM que vamos a manehar desde el split
+
+const prevBtn = document.querySelector('.prev-btn')
+const nextBtn = document.querySelector('.next-btn')
+const randomBtn = document.querySelector('.random-btn')
+
+//Traemos los elementos graficos
+
+const img = document.getElementById('person-img')
+const autor = document.getElementById('autor')
+const job = document.getElementById('job')
+const info = document.getElementById('info')
+
+//Necesitamos saber el objeto (review) que se esta mostrando
+const persona = reviews[0]
+persona.name
+persona.job
+persona.img
+persona.text
+
+
+//Elementos para la interacción del usuario
