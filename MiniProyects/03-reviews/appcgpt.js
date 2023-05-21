@@ -32,9 +32,9 @@ const reviews = [
   
   // seleccionar elementos del DOM
   const personImg = document.getElementById('person-img');
-  const authorElement = document.getElementById('autor');
-  const jobElement = document.getElementById('job');
-  const infoElement = document.getElementById('info');
+  const author = document.getElementById('autor');
+  const job = document.getElementById('job');
+  const info = document.getElementById('info');
   
   // elemento de revisión actual
   let currentReview = 0;
@@ -44,13 +44,11 @@ const reviews = [
     const review = reviews[currentReview];
   
     personImg.src = review.img;
-    authorElement.textContent = review.name;
-    jobElement.textContent = review.job;
-    infoElement.textContent = review.text;
+    author.textContent = review.name;
+    job.textContent = review.job;
+    info.textContent = review.text;
   }
   
-  // mostrar la revisión inicial al cargar la página
-  showReview();
   
 //Selector botones
   const btns = document.querySelectorAll('.btn')
@@ -62,22 +60,37 @@ btns.forEach(function(arrbtn){
         const type = selecbtn.currentTarget.classList;
         if(type.contains('prev-btn')){
             currentReview--;
-            if(currentReview < 0){
-                currentReview = reviews.length -1
-            }
+           
             showReview();
         }else if(type.contains('next-btn')){
             currentReview++;
-            if(currentReview === reviews.length){
-                currentReview = 0;
-            }
-            showReview
+            
+            showReview()
         } else{
             currentReview = Math.floor(Math.random() * reviews.length);
             showReview();
         }
     })
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   // agregar controladores de eventos a los botones

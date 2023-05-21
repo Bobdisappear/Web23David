@@ -27,22 +27,22 @@ for(let i= 0 ; i<btns.length ; i++){
 }
 
 
-btns.forEach(function(miboton){
-    miboton.addEventListener('click', function(e){
+// btns.forEach(function(miboton){
+//     miboton.addEventListener('click', function(e){
 
-    const styles = e.currentTarget.classList;
+//     const styles = e.currentTarget.classList;
     
-        if(styles.contains('decrease')){
-            contador--;
-        }else if (styles.contains('increase')){
-            contador++
-        }else{
-            contador = 0;
-        }
-    value.textContent = contador
+//         if(styles.contains('decrease')){
+//             contador--;
+//         }else if (styles.contains('increase')){
+//             contador++
+//         }else{
+//             contador = 0;
+//         }
+//     value.textContent = contador
     
-})
-})
+// })
+// })
 
 
 
