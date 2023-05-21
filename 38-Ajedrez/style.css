@@ -1,0 +1,19 @@
+body{
+    margin: 60px;
+    background-color: black;
+}
+
+
+div{
+    display: flex;
+    height: 100px;
+    width: 800px;
+}
+
+div.white{
+    background-color: antiquewhite;
+}
+
+div.black{
+    background-color: rgb(43, 41, 41);
+}
