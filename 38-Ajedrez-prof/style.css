@@ -4,19 +4,20 @@ body{
 }
 
 
-div{
+.fila{
     display: flex;
+    flex-wrap: wrap;
     height: 100px;
     width: 800px;
 }
 
-div.white-imp{
+.white{
     background-color: antiquewhite;
     height: 90px;
     width: 90px;
 }
 
-div.black-par{
+.black{
     background-color: rgb(51, 51, 51);
     height: 90px;
     width: 90px;
