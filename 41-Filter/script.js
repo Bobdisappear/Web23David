@@ -41,7 +41,7 @@ const companies = [
     end: 2034,},
     {name: 'company 3',
     categoria: 'finance',
-    start: 1980,
+    start: 2013,
     end: 2014,},
     {name: 'company 4',
     categoria: 'auto',
@@ -54,7 +54,7 @@ const companies = [
     {name: 'company 6',
     categoria: 'auto',
     start: 1880,
-    end: 2024,}
+    end: 1885,}
 
    
 ]
@@ -69,6 +69,6 @@ console.log(inicio);
 //Obtener las companias que empezaron en 1982 inclusive y posteriores a 2005 y cerraron antes del 2005
 
 const i = companies.start
-const teenYears = companies.filter(e  => ( e.end  >= i    ))
+const teenYears = companies.filter(e  => ( e.end - e.start >= 10    ))
 console.log(teenYears);
 //Obtener las compañias que tienen 10 años o mas de actividad

@@ -2,22 +2,49 @@
 // traversing the dom
 
 
-let plusbtn = document.querySelector('.plus-icon')
-let text = document.querySelector('.question-text')
+let plusbtn = document.querySelectorAll('.plus-icon')
+let text = document.querySelectorAll('.question-text')
 
+
+// console.log(plusbtn);
+// console.log(text);
 
 // toogle funciona como boton, haciendo boolean)
 
-for(let i=0 ; i<plusbtn.length || i<text.length ; i++){
-    plusbtn[i].addEventListener('click', function(){
-       text[i].classList.toggle('question-text')
+
+
+
+
+
+
+
+
+
+// Los tres botones abren el primer text
+
+for(let i of plusbtn){
+    console.log(i);
+    i.addEventListener('click', function(){
+       text.classList.toggle('question-text')
+       if(text == true){
+        
+       }
+
     })
+    console.log(text);
 
 }
 
 
-// minusBtn.addEventListener('click', function(){
-//     // text.classList.remove('question-text') &&
-//     // para.parentElement.remove(para)
+
+// Asi hace bucle a los tres de golpe y se abren todos
+
+// for(let i of plusbtn){
+//     console.log(i);
+//      i.addEventListener('click', function(){
+//         for(let o of text){
+//        o.classList.toggle('question-text')
+//     }
 //     })
- 
+
+// }
