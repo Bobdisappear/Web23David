@@ -36,26 +36,62 @@
 
 // table(i);
 
+// function createChessBoard(){
+//     const chessBoard = document.getElementById('chessboard')
+//     let chessboardHTML = '';
+
+//     for(let fila = 0 ; fila<8 ; fila++){
+//         for(let col=0;col<8;col++){
+//             // const colorCasilla = '';
+//             // if((fila + col) % 2 === 0 ){
+//             //     colorCasilla = 'white'
+//             // }else{
+//             //     colorCasilla = 'black'
+//             // }
+
+//             const colorCasilla = (fila + col) % 2 === 0 ? "white" : "black";
+//             chessboardHTML += `<div class="casilla ${colorCasilla}"></div>`
+
+//         }
+//     }
+//     chessBoard.innerHTML = `<div class= "fila">${chessboardHTML}</div>`
+
+// }
+
+// createChessBoard();
+
+
+// function CreateChessBoard(){
+//     const chessBoard = document.getElementById('chessboard')
+//     let chessboardHTML = '';
+
+//     for(let fila = 0; fila<8 ; fila++){
+//         for(let col = 0; col<8 ; col++){
+            
+//             const colorCasilla = (fila + col) % 2 === 0 ? "white" : "black";
+//             chessboardHTML += `<div class="casilla ${colorCasilla}"></div>`
+//         }
+//     }
+//     chessBoard.innerHTML = `<div class="fila">${chessboardHTML}</div>`
+// }
+
+// CreateChessBoard();
+
+
+
+
 function createChessBoard(){
-    const chessBoard = document.getElementById('chessboard')
+    let chessBoard = document.getElementById('chessboard')
     let chessboardHTML = '';
 
-    for(let fila = 0 ; fila<8 ; fila++){
-        for(let col=0;col<8;col++){
-            // const colorCasilla = '';
-            // if((fila + col) % 2 === 0 ){
-            //     colorCasilla = 'white'
-            // }else{
-            //     colorCasilla = 'black'
-            // }
+    for(let fila= 0; fila<8 ; fila++){
+        for(let col=0; col<8 ; col++){
 
             const colorCasilla = (fila + col) % 2 === 0 ? "white" : "black";
-            chessboardHTML += `<div class="casilla ${colorCasilla}"></div>`
-
+            chessboardHTML += `<div class= "casilla ${colorCasilla}"></div>`
         }
     }
-    chessBoard.innerHTML = `<div class= "fila">${chessboardHTML}</div>`
-
+    chessBoard.innerHTML = `<div class="fila">${chessboardHTML}</div> `
 }
 
 createChessBoard();
