@@ -12,7 +12,7 @@ function run(){
     //Tenemos acceso al ambito global
     console.log(window.innerHeight);
 
-}
+} 
 
 run();
 

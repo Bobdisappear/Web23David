@@ -2,16 +2,19 @@
 // traversing the dom
 
 
-const plusbtn = document.querySelector('.plus-icon')
-const text = document.querySelector('.question-text')
+let plusbtn = document.querySelector('.plus-icon')
+let text = document.querySelector('.question-text')
 
 
 // toogle funciona como boton, haciendo boolean)
 
- plusbtn.addEventListener('click', function(){    
-    text.classList.toggle('question-text')
-     
-})
+for(let i=0 ; i<plusbtn.length || i<text.length ; i++){
+    plusbtn[i].addEventListener('click', function(){
+       text[i].classList.toggle('question-text')
+    })
+
+}
+
 
 // minusBtn.addEventListener('click', function(){
 //     // text.classList.remove('question-text') &&
