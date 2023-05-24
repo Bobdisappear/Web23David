@@ -72,3 +72,20 @@ const menu = [
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
 ];
+
+
+const breakfast = menu.filter(b =>(b.category == 'breakfast'))
+const lunch = menu.filter(l =>(l.category == 'lunch'))
+const shakes = menu.filter(s =>(s.category == 'shakes'))
+
+
+const btns = document.querySelectorAll('.filter-btn')
+btns.forEach((eats) =>{
+  
+})
+
+
+console.log(btns);
+console.log(breakfast);
+console.log(shakes);
+console.log(lunch);
