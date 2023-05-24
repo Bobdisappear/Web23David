@@ -1,4 +1,4 @@
-
+  
 
 //Seleccionames los elementos del DOM que necesitamos:
 // Una coleccion de los articulos que tengan la clase .question

@@ -73,19 +73,38 @@ const menu = [
   },
 ];
 
-
+const section = document.querySelector('.section-center')
 const breakfast = menu.filter(b =>(b.category == 'breakfast'))
 const lunch = menu.filter(l =>(l.category == 'lunch'))
 const shakes = menu.filter(s =>(s.category == 'shakes'))
 
 
 const btns = document.querySelectorAll('.filter-btn')
-btns.forEach((eats) =>{
-  
+
+btns.forEach(() =>{
+  btns.addEventListener('click', () =>{
+    if(btns == document.getAtribute('all')){
+      section.innerHTML = menu
+
+      // display= display.join('breakfast');
+      // section.innerHTML = display
+
+    } 
+
+  })
+
 })
+
+
 
 
 console.log(btns);
 console.log(breakfast);
 console.log(shakes);
 console.log(lunch);
+
+
+
+// btns.forEach((eats) =>{
+//   const btnats = 
+// })
