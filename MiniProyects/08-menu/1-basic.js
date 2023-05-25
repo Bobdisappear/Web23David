@@ -74,36 +74,68 @@ const menu = [
 ];
 
 
+//menus por secciones
+
+let breakfast = menu.filter(b =>(b.category == 'breakfast'))
+const lunch = menu.filter(l =>(l.category == 'lunch'))
+const shakes = menu.filter(s =>(s.category == 'shakes'))
 
 //Traerse el div contenedor 
 
 const sectionCenter = document.querySelector('.section-center')
 
 // Al terminar de cargarse el DOM insertamos todos los items
+
 window.addEventListener('DOMContentLoaded',(event) =>{
-  displayItemsMenu(menu);
+  const btns = document.querySelectorAll('filter-btn');
+  
+  btns.forEach(function(sectionBtn){
+  
+  sectionBtn.addEventListener('click', function(selectbtn){
+    const type = selectbtn.getatribute.dataset('');
+    if(type.contains('breakfast')){
+      
+      displayItemsMenu(breakfast)
+    }else if(type.contains('lunch')){
+
+      displayItemsMenu(lunch)
+    }else if(type.contains('shake')){
+
+      displayItemsMenu(shakes)
+    }else{
+      
+      displayItemsMenu(menu);
+      console.log();
+    }
+  })
 })
+
+
+})
+
 
 //Recorre el array menu y genera el codigo html en funcion de la plantilla que nos han pasado con los datos correspondientes
 function displayItemsMenu(menuItems){
   let displayMenu = menuItems.map((item)=>{
     return `
     <article class="menu-item">
-            <img src="${item.img}" alt="menu item" class="photo" />
-              <div class="item-info">
-              <header>
-                  <h4>${item.title}</h4>
+    <img src="${item.img}" alt="menu item" class="photo" />
+    <div class="item-info">
+    <header>
+    <h4>${item.title}</h4>
                   <h4 class="price">${item.price}</h4>
                   </header>
                   <p class="item-text">
-                ${item.desc}
-              </p>
-            </div>
-            </article>`
+                  ${item.desc}
+                  </p>
+                  </div>
+                  </article>`
           })
 displayMenu = displayMenu.join("")
 sectionCenter.innerHTML =displayMenu
 }
+
+
 
 // const sectionCenter = document.querySelector(".section-center");
 
@@ -171,7 +203,18 @@ laboriosam excepturi! Quo, officia.
 
 
 
-
+// btns.forEach((btn) =>{
+//   let btnMenu = btn.getAttribute('')
+//   btnMenu.addEventListener('click', () =>{
+//    btns.forEach(function(atribute){
+    
+//     if(atribute == 'breakfast'){
+//       displayItemsMenu(breakfast)
+//       console.log(btnMenu);
+//     }
+//    }) 
+//   })
+// })
 
 
 
