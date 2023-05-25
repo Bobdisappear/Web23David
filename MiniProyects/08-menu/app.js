@@ -73,38 +73,70 @@ const menu = [
   },
 ];
 
-const section = document.querySelector('.section-center')
+//Seleccion de lugar.document
+const sectionCenter = document.querySelector('.section-center')
+const titleName = document.querySelector('.title')
+const text = document.querySelector('.item-text')
+const price = document.querySelector('.price')
+const photo = document.querySelector('.photo')
+
+//menus por secciones
+
 const breakfast = menu.filter(b =>(b.category == 'breakfast'))
 const lunch = menu.filter(l =>(l.category == 'lunch'))
 const shakes = menu.filter(s =>(s.category == 'shakes'))
 
 
+//seleccion de botones
 const btns = document.querySelectorAll('.filter-btn')
 
-btns.forEach(() =>{
-  btns.addEventListener('click', () =>{
-    if(btns == document.getAtribute('all')){
-      section.innerHTML = menu
+//funcion de botones
+btns.forEach(function(sectionBtn){
+  
+  sectionBtn.addEventListener('click', function(selectbtn){
+    const type = selectbtn.currentTarget.getatribute('data-id');
+    if(type.contains('breakfast')){
+      
+      filterByCategory('breakfast')
+    }else if(type.contains('lunch')){
 
-      // display= display.join('breakfast');
-      // section.innerHTML = display
+      filterByCategory('lunch')
+    }else if(type.contains('shake')){
 
-    } 
-
-  })
-
+      filterByCategory('shake')
+    }else{
+      
+    }
+    
+    })
 })
 
 
+//funcions para reutilizar y elegir array en vez de seleccionar cada una
+function filterByCategory (categoryname){
+const filteredMenu = menu.filter(b =>(b.category == categoryname))
+return filteredMenu
+
+}
+console.log(filterByCategory('breakfast'));
 
 
-console.log(btns);
 console.log(breakfast);
 console.log(shakes);
 console.log(lunch);
 
 
 
-// btns.forEach((eats) =>{
-//   const btnats = 
-// })
+
+// // funcion por atributos de menu
+// let currentMenu = 0;
+
+// function showEats(){
+//   const eats = menu[currentMenu];
+
+//   titleName.textContent = eats.title;
+//   text.textContent = eats.desc;
+//   price.textContent = eats.price;
+//   photo.src = eats.img
+
+// }

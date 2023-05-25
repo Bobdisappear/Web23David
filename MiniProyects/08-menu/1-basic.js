@@ -73,27 +73,106 @@ const menu = [
   },
 ];
 
-const sectionCenter = document.querySelector(".section-center");
 
-window.addEventListener("DOMContentLoaded", function () {
-  let displayMenu = menu.map(function (item) {
-    // console.log(item);
 
-    return `<article class="menu-item">
-          <img src=${item.img} alt=${item.title} class="photo" />
-          <div class="item-info">
-            <header>
-              <h4>${item.title}</h4>
-              <h4 class="price">$${item.price}</h4>
-            </header>
-            <p class="item-text">
-              ${item.desc}
-            </p>
-          </div>
-        </article>`;
-  });
-  displayMenu = displayMenu.join("");
-  console.log(displayMenu);
+//Traerse el div contenedor 
 
-  sectionCenter.innerHTML = displayMenu;
-});
+const sectionCenter = document.querySelector('.section-center')
+
+// Al terminar de cargarse el DOM insertamos todos los items
+window.addEventListener('DOMContentLoaded',(event) =>{
+  displayItemsMenu(menu);
+})
+
+//Recorre el array menu y genera el codigo html en funcion de la plantilla que nos han pasado con los datos correspondientes
+function displayItemsMenu(menuItems){
+  let displayMenu = menuItems.map((item)=>{
+    return `
+    <article class="menu-item">
+            <img src="${item.img}" alt="menu item" class="photo" />
+              <div class="item-info">
+              <header>
+                  <h4>${item.title}</h4>
+                  <h4 class="price">${item.price}</h4>
+                  </header>
+                  <p class="item-text">
+                ${item.desc}
+              </p>
+            </div>
+            </article>`
+          })
+displayMenu = displayMenu.join("")
+sectionCenter.innerHTML =displayMenu
+}
+
+// const sectionCenter = document.querySelector(".section-center");
+
+// window.addEventListener("DOMContentLoaded", function () {
+//   let displayMenu = menu.map(function (item) {
+//     // console.log(item);
+
+//     return `<article class="menu-item">
+//           <img src=${item.img} alt=${item.title} class="photo" />
+//           <div class="item-info">
+//             <header>
+//               <h4>${item.title}</h4>
+//               <h4 class="price">$${item.price}</h4>
+//             </header>
+//             <p class="item-text">
+//               ${item.desc}
+//             </p>
+//           </div>
+//         </article>`;
+//   });
+//   displayMenu = displayMenu.join("");
+//   console.log(displayMenu);
+
+//   sectionCenter.innerHTML = displayMenu;
+// });
+
+
+
+
+
+
+
+
+
+
+
+/* <div class="section-center">
+<!-- single item -->
+<article class="menu-item">
+<img src="./menu-item.jpeg" alt="menu item" class="photo" />
+<div class="item-info">
+<header>
+<h4>buttermilk pancakes</h4>
+<h4 class="price">$15</h4>
+</header>
+<p class="item-text">
+Lorem ipsum dolor sit amet consectetur adipisicing elit.
+Repudiandae, sint quam. Et reprehenderit fugiat nesciunt inventore
+laboriosam excepturi! Quo, officia.
+</p>
+</div>
+</article> */
+
+
+
+// //anticopy
+// window.addEventListener('copy',(e)=>{
+//   e.clipboardData.setData('text/plain', 'dir\r')
+//   e.preventDefault()
+// })
+
+
+
+
+
+
+
+
+
+
+
+
