@@ -73,70 +73,151 @@ const menu = [
   },
 ];
 
-//Seleccion de lugar.document
+
+
+//Traer donde vamos a insertar la listad de menu
+
 const sectionCenter = document.querySelector('.section-center')
-const titleName = document.querySelector('.title')
-const text = document.querySelector('.item-text')
-const price = document.querySelector('.price')
-const photo = document.querySelector('.photo')
 
-//menus por secciones
+//Funcion para traer el menu con los datos correspondienter en plantilla
 
-const breakfast = menu.filter(b =>(b.category == 'breakfast'))
-const lunch = menu.filter(l =>(l.category == 'lunch'))
-const shakes = menu.filter(s =>(s.category == 'shakes'))
+function displayMenuItems (menuItems){
+  let displayMenu = menuItems.map((item) =>{
+    return `<article class= "menu.item">
+                <img src=${item.img} alt=${item.title} class="photo" />
+                    <div class="item-info">
+                        <header>
+                            <h4>${item.title}</h4>
+                            <h4 class=price">${item.priceZ}</h4>
+                        </header>
+                        <p class="item-text">
+                            ${item.desc}
+                        </p>
+                    </div>
+             </article>`;
+  });
+  displayMenu = displayMenu.join("<hr>")
+  sectionCenter.innerHTML=displayMenu;
+}
 
 
-//seleccion de botones
-const btns = document.querySelectorAll('.filter-btn')
+//Insertar los items generados
 
-//funcion de botones
-btns.forEach(function(sectionBtn){
-  
-  sectionBtn.addEventListener('click', function(selectbtn){
-    const type = selectbtn.currentTarget.getatribute('data-id');
-    if(type.contains('breakfast')){
-      
-      filterByCategory('breakfast')
-    }else if(type.contains('lunch')){
+window.addEventListener('DOMContentLoaded', () => {
+  displayMenuItems(menu);
 
-      filterByCategory('lunch')
-    }else if(type.contains('shake')){
+});
 
-      filterByCategory('shake')
-    }else{
-      
+
+
+//Funcion que generara los botones para cada categoria
+
+function displayMenuBtns() {
+  //crea un array con categoria unica
+  const categorias = menu.reduce((values,item) =>{
+    if (!values.includes(item.category)){
+      values.push (item.category);
     }
-    
-    })
-})
-
-
-//funcions para reutilizar y elegir array en vez de seleccionar cada una
-function filterByCategory (categoryname){
-const filteredMenu = menu.filter(b =>(b.category == categoryname))
-return filteredMenu
+    return values
+  },['all']);
+  
+  //Generar los botones
+const categoryButtons = categorias.map((category))
 
 }
-console.log(filterByCategory('breakfast'));
-
-
-console.log(breakfast);
-console.log(shakes);
-console.log(lunch);
 
 
 
 
-// // funcion por atributos de menu
-// let currentMenu = 0;
 
-// function showEats(){
-//   const eats = menu[currentMenu];
 
-//   titleName.textContent = eats.title;
-//   text.textContent = eats.desc;
-//   price.textContent = eats.price;
-//   photo.src = eats.img
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// //Seleccion de lugar.document
+// const sectionCenter = document.querySelector('.section-center')
+// const titleName = document.querySelector('.title')
+// const text = document.querySelector('.item-text')
+// const price = document.querySelector('.price')
+// const photo = document.querySelector('.photo')
+
+// //menus por secciones
+
+// const breakfast = menu.filter(b =>(b.category == 'breakfast'))
+// const lunch = menu.filter(l =>(l.category == 'lunch'))
+// const shakes = menu.filter(s =>(s.category == 'shakes'))
+
+
+// //seleccion de botones
+// const btns = document.querySelectorAll('.filter-btn')
+
+// //funcion de botones
+// btns.forEach(function(sectionBtn){
+  
+//   sectionBtn.addEventListener('click', function(selectbtn){
+//     const type = selectbtn.currentTarget.getatribute('data-id');
+//     if(type.contains('breakfast')){
+      
+//       filterByCategory('breakfast')
+//     }else if(type.contains('lunch')){
+
+//       filterByCategory('lunch')
+//     }else if(type.contains('shake')){
+
+//       filterByCategory('shake')
+//     }else{
+      
+//     }
+    
+//     })
+// })
+
+
+// //funcions para reutilizar y elegir array en vez de seleccionar cada una
+// function filterByCategory (categoryname){
+// const filteredMenu = menu.filter(b =>(b.category == categoryname))
+// return filteredMenu
 
 // }
+// console.log(filterByCategory('breakfast'));
+
+
+// console.log(breakfast);
+// console.log(shakes);
+// console.log(lunch);
+
+
+
+
+// // // funcion por atributos de menu
+// // let currentMenu = 0;
+
+// // function showEats(){
+// //   const eats = menu[currentMenu];
+
+// //   titleName.textContent = eats.title;
+// //   text.textContent = eats.desc;
+// //   price.textContent = eats.price;
+// //   photo.src = eats.img
+
+// // }

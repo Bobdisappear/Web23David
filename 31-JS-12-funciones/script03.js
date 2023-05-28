@@ -1,5 +1,6 @@
 
 //rest operator
+
 //spread operator
 function arrayMaker(...paramsList){
     const miArray = [...paramsList]
