@@ -163,3 +163,57 @@ const menu = [
     //console.log(displayMenu);
     sectionCenter.innerHTML = displayMenu;
   }
+
+
+  //   function displayItemsMenu(menuItems) {
+  //     menuItems.forEach(menuItems => {
+
+  //       const newArticle = newItemsMenu(menuItems);
+  //       sectionCenter.appendChild(newArticle);
+  //     })
+ 
+  //   sectionCenter.innerHTML = displayMenu;
+  // }
+  
+  // function newItemsMenu(menuItems){
+    
+
+  //     const article = document.createElement('article');
+  //     article.className = 'menu-item'
+
+  //     const img = document.createElement('img');
+  //     img.className ='item-info'
+  //     img.src = menuItems.img
+  //     img.alt = menuItems.title 
+
+  //     const div = document.createElement('div')
+  //     div.className ='item-info'
+
+  //     const header = document.createElement('header')
+
+  //     const hHead = document.createElement('h4')
+  //     hHead.innerHTML = menuItems.title
+
+  //     const hBody = document.createElement('h4')
+  //     hBody.className = 'price'
+  //     hBody.innerHTML = menuItems.price
+
+  //     const p = document.createElement('p')
+  //     p.className ='item-text'
+  //     p.innerHTML = menuItems.desc
+
+  //     header.appendChild(hHead)
+  //     header.appendChild(hBody)
+      
+  //     div.appendChild(header)
+  //     div.appendChild(p)
+      
+  //     article.appendChild(img)
+  //     article.appendChild(div)
+      
+    
+  //     return article;
+  //   }
+  //   // displayMenu = displayMenu.join("<hr>");
+
+  
