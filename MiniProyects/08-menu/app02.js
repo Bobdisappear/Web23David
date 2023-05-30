@@ -144,76 +144,77 @@ const menu = [
   //Funcion que recorre el array menu y genera el codigo HTML
   //en funcion de la plantilla que nos han pasado con los datos
   //con los datos correspondientes de cada elemento del menu
-  function displayItemsMenu(menuItems) {
-    let displayMenu = menuItems.map((item) => {
-      return `<article class="menu-item">
-                    <img src=${item.img} alt=${item.title} class="photo" />
-                    <div class="item-info">
-                    <header>
-                      <h4>${item.title}</h4>
-                      <h4 class="price">${item.price}</h4>
-                    </header>
-                    <p class="item-text">
-                        ${item.desc}
-                    </p>
-                    </div>
-                  </article>`;
-    });
-    displayMenu = displayMenu.join("<hr>");
-    //console.log(displayMenu);
-    sectionCenter.innerHTML = displayMenu;
-  }
-
-
-  //   function displayItemsMenu(menuItems) {
-  //     menuItems.forEach(menuItems => {
-
-  //       const newArticle = newItemsMenu(menuItems);
-  //       sectionCenter.appendChild(newArticle);
-  //     })
- 
+  // function displayItemsMenu(menuItems) {
+  //   let displayMenu = menuItems.map((item) => {
+  //     return `<article class="menu-item">
+  //                   <img src=${item.img} alt=${item.title} class="photo" />
+  //                   <div class="item-info">
+  //                   <header>
+  //                     <h4>${item.title}</h4>
+  //                     <h4 class="price">${item.price}</h4>
+  //                   </header>
+  //                   <p class="item-text">
+  //                       ${item.desc}
+  //                   </p>
+  //                   </div>
+  //                 </article>`;
+  //   });
+  //   displayMenu = displayMenu.join("<hr>");
+  //   //console.log(displayMenu);
   //   sectionCenter.innerHTML = displayMenu;
   // }
+
+
+    function displayItemsMenu(menuItems) {
+      menuItems.forEach(menuItems => {
+
+        const newArticle = newItemsMenu(menuItems);
+        sectionCenter.appendChild(newArticle);
+      })
+ 
   
-  // function newItemsMenu(menuItems){
+  }
+  
+  function newItemsMenu(menuItems){
     
-
-  //     const article = document.createElement('article');
-  //     article.className = 'menu-item'
-
-  //     const img = document.createElement('img');
-  //     img.className ='item-info'
-  //     img.src = menuItems.img
-  //     img.alt = menuItems.title 
-
-  //     const div = document.createElement('div')
-  //     div.className ='item-info'
-
-  //     const header = document.createElement('header')
-
-  //     const hHead = document.createElement('h4')
-  //     hHead.innerHTML = menuItems.title
-
-  //     const hBody = document.createElement('h4')
-  //     hBody.className = 'price'
-  //     hBody.innerHTML = menuItems.price
-
-  //     const p = document.createElement('p')
-  //     p.className ='item-text'
-  //     p.innerHTML = menuItems.desc
-
-  //     header.appendChild(hHead)
-  //     header.appendChild(hBody)
-      
-  //     div.appendChild(header)
-  //     div.appendChild(p)
-      
-  //     article.appendChild(img)
-  //     article.appendChild(div)
-      
     
-  //     return article;
-  //   }
-  //   // displayMenu = displayMenu.join("<hr>");
+       const article = document.createElement('article');
+      article.className = 'menu-item'
+
+      const img = document.createElement('img');
+      img.className ='item-info'
+      img.src = menuItems.img
+      img.alt = menuItems.title 
+
+      const div = document.createElement('div')
+      div.className ='item-info'
+
+      const header = document.createElement('header')
+
+      const hHead = document.createElement('h4')
+      hHead.innerHTML = menuItems.title
+
+      const hBody = document.createElement('h4')
+      hBody.className = 'price'
+      hBody.innerHTML = menuItems.price
+
+      const p = document.createElement('p')
+      p.className ='item-text'
+      p.innerHTML = menuItems.desc
+
+      header.appendChild(hHead)
+      header.appendChild(hBody)
+      
+      div.appendChild(header)
+      div.appendChild(p)
+      
+      article.appendChild(img)
+      article.appendChild(div)
+      return article;
+    }
+    
+    
+    
+    // displayMenu = displayMenu.join("<hr>");
 
   
