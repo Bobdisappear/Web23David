@@ -36,11 +36,11 @@
 
 
 // Añadir item
-function addNewItem(){
-const add = document.getElementById('add')
-const value = document.getElementById(('item-input'))
+function addNewItem() {
+    const add = document.getElementById('add')
+    const value = document.getElementById(('item-input'))
 
-add.addEventListener('click', addItem =>{
+    add.addEventListener('click', () => {
 
         const ul = document.querySelector('.items')
         const li = document.createElement('li');
@@ -51,7 +51,7 @@ add.addEventListener('click', addItem =>{
         const i = document.createElement('i');
         i.className = 'fa-solid fa-xmark'
         const thirdItem = document.querySelector('li:nth-child(3)')
-        ul.insertBefore(li,thirdItem)
+        ul.insertBefore(li, thirdItem)
 
         ul.appendChild(li)
         li.appendChild(btn)
@@ -59,15 +59,18 @@ add.addEventListener('click', addItem =>{
 
         const newBtnRed = document.querySelectorAll('.remove-item')
 
-        newBtnRed.forEach((item)=>{
-        item.addEventListener('click',() =>{
-        item.parentElement.remove()
+        newBtnRed.forEach((item) => {
+            item.addEventListener('click', () => {
+                item.parentElement.remove()
 
-    })  
-})
+            })
 
-return addItem
-})  
+
+        })
+
+        ArrayList.push(li)
+        
+    })
 }
 addNewItem();
 
@@ -75,38 +78,74 @@ addNewItem();
 
 const ArrayList = []
 const liList = document.querySelectorAll("li")
-liList.forEach((arrayLi) =>{
+liList.forEach((arrayLi) => {
     ArrayList.push(arrayLi)
     return
 })
 
-//auque me genere li dentro de elements estos no los reconoce. solo recorre los predefinidos (temporales?)
+//Check ArrayList
+
+
+//función uso filter
+
+// function checkText(shoping){
+//     return shoping > document.getElementById("filter").innerHTML
+// }
+// function seeResult(){
+//     document.getElementById("result").innerHTML = ArrayList.filter(checkText)
+// }
+
+// seeResult();
+// checkText();
 
 //Seleccionar boton y remover lista
 const btn = document.getElementById('clear')
 
-btn.addEventListener('click',() =>{
+btn.addEventListener('click', () => {
 
     const li = document.querySelectorAll("li")
-    li.forEach((list) =>{
-        
+    li.forEach((list) => {
+
         list.remove()
     })
-    return 
-})  
+    return
+})
 
 
 //Remover un solo boton recorriendo la lista para no perder 'ul'
 
 const btnRed = document.querySelectorAll('.remove-item')
 
-btnRed.forEach((item)=>{
-    item.addEventListener('click',removeParent =>{
+btnRed.forEach((item) => {
+    item.addEventListener('click', removeParent => {
 
-    item.parentElement.remove()
-    
-    return removeParent
-})  
+        item.parentElement.remove()
+
+        return removeParent
+    })
 })
 
+
+//filtro Toni
+
+const textToFilter = ArrayList.value;
+
+function filterItem(){
+    const item = itemList.querySelectorAll("li")
+    item.forEach((it) =>{
+        const txtItem = it.firstChild.textContent.toLocaleLowerCase
+        if(txtItem.indexOf(textToFilter) != -1){
+            item.style.display = "flex";
+        }else{
+            item.style.display = "none";
+        }
+    })
+    
+}
+
+const itemFilter = document.getElementById("filter",filterItem);
+
+itemFilter.addEventListener("input", () =>{
+
+})
 
