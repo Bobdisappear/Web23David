@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="title">El Mecánico</h1>
+    </header>
+    <section class="content">
+    <div class="flex left">
+        <form action="#" id="form">
+        <div class="gastos div-content">
+            <label for="gasto">Gasto:</label>
+            <input type="text" class="form-input" id="gasto" placeholder="Concepto">
+        </div>
+        <div class="cantidad div-content">
+            <label for="cantidad">Cantidad:</label>
+            <input type="text" class="form-input" id="cantidad" placeholder="Cantidad">
+        </div>
+        <button type="sumbmit" class="btn">Abre la cartera</button>
+        </form>
+    </div>
+    <div class="flex right">
+        <h2>Conceptos</h2>
+        <ul class="list">
+            <!-- <li class="elementList">
+            </li> -->
+          
+           
+        </ul>
+        <div id="presupuesto" class="presupuesto">
+            <div class="alert alert-primary">
+                <p>Presupuesto: € <span id="total"></span> </p>
+            </div>
+            <div class="restante alert alert-success">
+                <p>Restante: € <span id="restante"></span></p>
+            </div>
+        </div> 
+    </div>
+   </section>
+   <script src="script.js"></script>
+</body>
+</html>
