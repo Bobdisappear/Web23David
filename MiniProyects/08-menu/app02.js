@@ -215,6 +215,8 @@ const menu = [
     
     
     
+// Funcion de botones filtros en vez de añadir elementos
+
     // displayMenu = displayMenu.join("<hr>");
 
   

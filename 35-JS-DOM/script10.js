@@ -1,4 +1,3 @@
-
 const itemForm = document.getElementById("item-form");
 const itemInput = document.getElementById("item-input");
 const itemList = document.getElementById("item-list");
@@ -34,3 +33,26 @@ function createNewItem(item) {
 }
 //Evento de envio del formulario
 itemForm.addEventListener("submit", addItem);
+
+const clearBtn = document.querySelector("#clear");
+
+function onClear() {
+  const itemList = document.querySelector("ul");
+  const items = document.querySelectorAll("li");
+  //Limpiado burro
+  //itemList.innerHTML = "";
+  //items.forEach((item) => item.remove())
+  
+  while(itemList.firstChild){
+    itemList.removeChild(itemList.firstChild)
+  }
+
+
+}
+
+clearBtn.addEventListener("click", function () {
+  const confirm = window.confirm("¿Estas seguro?");
+  if (confirm) {
+    onClear();
+  }
+});

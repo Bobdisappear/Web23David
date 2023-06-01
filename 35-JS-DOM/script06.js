@@ -128,24 +128,24 @@ btnRed.forEach((item) => {
 
 //filtro Toni
 
-const textToFilter = ArrayList.value;
+// const textToFilter = ArrayList.value;
 
-function filterItem(){
-    const item = itemList.querySelectorAll("li")
-    item.forEach((it) =>{
-        const txtItem = it.firstChild.textContent.toLocaleLowerCase
-        if(txtItem.indexOf(textToFilter) != -1){
-            item.style.display = "flex";
-        }else{
-            item.style.display = "none";
-        }
-    })
+// function filterItem(){
+//     const item = itemList.querySelectorAll("li")
+//     item.forEach((it) =>{
+//         const txtItem = it.firstChild.textContent.toLocaleLowerCase
+//         if(txtItem.indexOf(textToFilter) != -1){
+//             item.style.display = "flex";
+//         }else{
+//             item.style.display = "none";
+//         }
+//     })
     
-}
+// }
 
-const itemFilter = document.getElementById("filter",filterItem);
+// const itemFilter = document.getElementById("filter",filterItem);
 
-itemFilter.addEventListener("input", () =>{
+// itemFilter.addEventListener("input", () =>{
 
-})
+// })
 

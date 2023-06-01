@@ -33,7 +33,7 @@ function createItem(){
 //  Añadir Item
 function addNewItem(){
     btnAddItem.addEventListener('click', () =>{  
-        headList.insertBefore ((createItem(addInputItem.contains)), thirdItem)
+        headList.insertBefore ((createItem(addInputItem.contains(addInputItem))), thirdItem)
     })
 }
 addNewItem();
