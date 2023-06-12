@@ -144,3 +144,7 @@ footer>a{
     color: aliceblue;
     margin-right: 0.8rem;
 }
+section>p{
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.4rem;
+}
