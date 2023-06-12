@@ -23,25 +23,25 @@
                     <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor voluptatem minus aspernatur obcaecati soluta excepturi qui temporibus maxime exercitationem veritatis voluptas illo amet voluptatibus totam magni iste, sequi nam debitis?</p>
 
                     <ul class="root-list">
-                        <li><a href="">Tipos de sistemas de archivos y sistemas operativos soportados</a>
+                        <li><a href="#definiciones">Tipos de sistemas de archivos y sistemas operativos soportados</a>
                             <ul>
-                                <li class="second-line"><a href="">FAT (File Allocation Table)</a></li>
-                                <li class="second-line"><a href="">exFAT (Extended File Allocation Table)</a></li>
-                                <li class="second-line"><a href="">NFTS (New Technology File System)</a></li>
-                                <li class="second-line"><a href="">ext4 (Fourth Extended Filesystem)</a></li>
+                                <li class="second-line"><a href="#fat">FAT (File Allocation Table)</a></li>
+                                <li class="second-line"><a href="#exfat">exFAT (Extended File Allocation Table)</a></li>
+                                <li class="second-line"><a href="#ntfs">NFTS (New Technology File System)</a></li>
+                                <li class="second-line"><a href="ext4">ext4 (Fourth Extended Filesystem)</a></li>
 
                             </ul>                      
                         </li>
-                        <li><a href="">Protocolos de Internet y descripción</a>
+                        <li><a href="#protocolos">Protocolos de Internet y descripción</a>
                             <ul>
-                                <li class="second-line"><a href="">Http</a></li>
-                                <li class="second-line"><a href="">FTP</a></li>
-                                <li class="second-line"><a href="">IMAP</a></li>
+                                <li class="second-line"><a href="#http">Http</a></li>
+                                <li class="second-line"><a href="#ftp">FTP</a></li>
+                                <li class="second-line"><a href="#imap">IMAP</a></li>
                             </ul>
                         </li>
-                        <li><a href="">10 comandos de terminal mas conocidos para Linux</a></li>
-                        <li><a href="">10 comandos de CMD de Windows</a></li>
-                        <li><a href="">5 Comandos del protocolo FTP</a></li>
+                        <li><a href="#terminal-linux">10 comandos de terminal mas conocidos para Linux</a></li>
+                        <li><a href="#cmd">10 comandos de CMD de Windows</a></li>
+                        <li><a href="#comandos-ftp">5 Comandos del protocolo FTP</a></li>
                     </ul>
                 </div>
             </div>
@@ -54,10 +54,130 @@
         <section id="definiciones">
             <h2>Tipos de sistemas de archivos y sistemas operativos soportados</h2>
             <p>Para comenzar debemos conoder que es un sistema de de archivos: Un sistema de archivos es el sistema de almacenamiento de un dispositivo de memoria, que estructura y organiza la escritura, búsqueda, lectura, almacenamiento, edición y eliminación de archivos de una manera concreta. El objetivo principal de esta organización es que el usuario pueda identificar los archivos sin lugar a error y acceder a ellos lo más rápido posible.</p>
+            <h3 id="fat">FAT</h3>
+            <p>Este sistema de archivos existe desde 1980. Las versiones publicadas desde entonces reciben los nombres de FAT12, FAT16 y FAT32. El formato FAT es ideal para gestionar un volumen de datos pequeño. Desde la perspectiva actual, el sistema de archivos FAT está desactualizado, porque incluso en la variante más moderna y potente (FAT32, lanzada en 1997), los archivos pueden tener un tamaño máximo de 4 gigabytes (GB). FAT32 también limita el tamaño máximo de la partición a 8 terabytes (TB).
+
+                A pesar de estas limitaciones, el formato FAT sigue siendo muy común. Se utiliza para soportes de datos portátiles extraíbles (discos duros externos o memorias USB) y hardware especial (cámaras digitales, smartphones, rúters, televisores, radios para coche, etc.). Tiene el mayor rango de compatibilidad, especialmente en dispositivos móviles.</p>
+            <h3 id="exfat">exFAT</h3>
+            <p>exFAT (Extended File Allocation Table o tabla de asignación de archivos extendida)
+                Este formato, publicado en 2006, es la evolución de FAT, el formato clásico. exFAT se diseñó originalmente para medios de almacenamiento extraíbles y, por lo tanto, es especialmente adecuado para memorias USB, tarjetas de memoria y discos duros externos, como unidades de estado sólido (SSD, acrónimo inglés de solid-state drive) con capacidad de almacenamiento individual. exFAT funciona de manera particularmente eficiente con soportes de datos más pequeños. Sin embargo, también puede procesar archivos grandes y supera con creces el límite de 4 GB de FAT32. Desde Windows 7, exFAT es compatible de forma nativa (por lo tanto, es el estándar de fábrica y no conlleva la necesidad de instalar controladores adicionales o paquetes de servicios especiales).</p>
+            
+            <h3 id="ntfs">NTFS</h3>
+            <p>El sistema de archivos NTFS, que se introdujo en 1993 con el sistema operativo Windows NT, ha sido el sistema de archivos estándar para ordenadores con Windows desde Windows Vista. Ofrece varias ventajas sobre FAT, como la posibilidad de comprimir los medios de almacenamiento y una mayor seguridad de los datos (por ejemplo, mediante cifrado). Una característica especial de NTFS es que los derechos de acceso y recursos compartidos de los archivos y carpetas pueden definirse al detalle y de manera integral. Los usuarios pueden asignar derechos de acceso local y remoto a través de la red.</p>
+            <h3 id="ext4">ext4</h3>
+            <p>ext4 se introdujo en 2008 como sucesor de ext3. Este sistema de archivos es actualmente el estándar para muchos sistemas Linux, como Ubuntu. Su novedad más importante es la función extents, que optimiza la gestión de archivos grandes y evita la fragmentación de manera más eficaz que sus predecesores. Con ext4, las particiones se pueden ampliar y reducir según sea necesario, e incluso durante el procesamiento. Al contrario de ext3, que admitía un máximo de 32 terabytes, el sistema de archivos ext4 admite un volumen máximo muchas veces mayor, de 1 exabyte (aproximadamente 1 millón de terabytes).	</p>
+       
+            <h2 id="protocolos">Protocolos de Internet y descripción</h2>
+            <p>Un protocolo es un conjunto de reglas: los protocolos de red son estándares y políticas formales, conformados por restricciones, procedimientos y formatos que definen el intercambio de paquetes de información para lograr la comunicación entre dos servidores o más dispositivos a través de una red.
+
+                Los protocolos de red incluyen mecanismos para que los dispositivos se identifiquen y establezcan conexiones entre sí, así como reglas de formato que especifican cómo se forman los paquetes y los datos en los mensajes enviados y recibidos. Algunos protocolos admiten el reconocimiento de mensajes y la compresión de datos diseñados para una comunicación de red confiable de alto rendimiento.</p>
+            <h3 id="http">Http</h3>
+            <p>El HTTP es uno de los protocolos de internet más reconocidos, debido a que representa la base de la red informática mundial WWW, donde seguramente estás navegando ahora mismo. Este protocolo funciona como fundamento para los intercambios de datos que se realizan en la web, por lo que conocer sus propiedades y funcionamiento será de gran relevancia para ti.</p>
+        
+            <h3 id="ftp">FTP</h3>
+            <p>También se conoce como File Transfer Protocol y es uno de los protocolos de internet más antiguos. Se utiliza comúnmente para los procesos de transferencia de archivos entre dispositivos conectados a una red TCP.</p>
+        
+            <h3 id="imap">IMAP</h3>
+            <p>El Protocolo de acceso a mensajes de Internet (IMAP) le permite acceder y administrar sus mensajes de email en el servidor de email. Este protocolo le permite manipular carpetas, eliminar permanentemente y buscar eficientemente a través de mensajes. También te da la opción de establecer o eliminar banderas de email, o buscar atributos de correo electrónico de forma selectiva. Por defecto, todos los mensajes permanecen en el servidor hasta que el usuario los elimina específicamente.</p>
+        
+            
+            <h2 id="terminal-linux">10 Comandos de terminal mas usados en Linux</h2>
+            <h3>pwd</h3>
+                <p>Significa Personal Working Directory te muestra la ruta del directorio en que estás ubicado actualmente.</p>
+
+            <h3>mkdir</h3>
+                <p>Significa Make Directory y con él puedes crear una nueva carpeta con el nombre que indiques.</p>
+            
+            <h3>touch</h3>
+                <p>Con este comando puedes crear nuevos archivos en el directorio actual.</p>
+
+            <h3>ls</h3>
+            <p>Este comando lista los archivos y directorios de la carpeta actual.</p>
+
+            <h3>cd</h3>
+            <p>El comando cd (change directory) permite moverse entre directorios del sistema.</p>
+
+            <h3>mv</h3>
+            <p>El comando mv (Move) mueve directorios o archivos de una ubicación a otra. Su sintaxis es: mv {ubicación\_actual} {nueva\_ubicación}</p>
+
+            <h3>cp</h3>
+            <p>El comando cp (Copy) copia archivos o directorios. Su sintaxis es cp {origen} {destino}</p>
+
+            <h3>rm y rmdir</h3>
+            <p>El comando rm (Remove) elimina archivos. Su sintaxis es rm {nombre\_del\_archivo}
+                <br>
+                El comando rmdir (Remove directory) elimina carpetas vacías. Su sintaxis es: rmdir {nombre\_carpeta}</p>
+            
+            <h3>cat</h3>
+            <p>El comando cat te permite leer el contenido de archivos.</p>
+
+            <h3>find</h3>
+            <p>Con el comando find y la opción -iname puedes encontrar archivos. La sintaxis es: find {donde\_buscar} -iname {archivo\_a\_buscar}</p>
+        
+            <h2 id="cmd">10 Comandos CMD básicos</h2>
+
+            <h3>CD</h3>
+            <p>CD significa carpeta. Escribiendo CD Documentosentrarás en la carpeta Documentos. Y para salir de ella, solo tendrás que escribir CD..</p>
+            
+            <h3>DIR</h3>
+            <p>Muestra todo el contenido de un directorio (carpeta).</p>
+
+            <h3>TREE</h3>
+            <p>Muestra el árbol de carpetas de la carpeta que le indiques.</p>
+                
+            <h3>MD</h3>
+            <p>Crea una carpeta o directorio.</p>
+            
+            <h3>MOVE</h3>
+            <p>Te permite mover un archivo de un directorio a otro.</p>
+
+            <h3>RENAME</h3>
+            <p>Cambiar el nombre o la extensión de un archivo, como si lo hicieras en Windows.</p>
+
+            <h3>DEL</h3>
+            <p>Borra el archivo o carpeta que indiques tras un espacio.</p>
+        
+            <h3>DATE</h3>
+            <p>Permite ver o cambiar la fecha del equipo.</p>
+            
+            <h3>FIND</h3>
+            <p>Busca una cadena de texto en uno o más archivos.</p>
+        
+            <h2 id="comandos-ftp">5 Comandos del protocolo FTP</h2>
+
+            <h3>ftp</h3>
+            <p>Accede al intérprete de comandos ftp.</p>
+
+            <h3>open</h3>
+            <p>Inicia sesión en el sistema remoto desde el intérprete de comandos.</p>
+            
+            <h3>close</h3>
+            <p>Cierra la sesión del sistema remoto y vuelve al intérprete de comandos.</p>
+
+            <h3>bye</h3>
+            <p>Sale del intérprete de comandos ftp.</p>
+
+            <h3>help</h3>
+            <p>Muestra todos los comandos ftp o, si se proporciona un nombre de comando, se describe brevemente lo que hace el comando.</p>
+
         </section>
+
     </main>
 <footer>
-<!-- https://www.ionos.es/digitalguide/servidores/know-how/sistemas-de-archivos/? -->
+    <h2>squarebig</h2>
+
+    <h3>Biografia</h3>
+    
+    <a href="https://www.ionos.es/digitalguide/servidores/know-how/sistemas-de-archivos/?">Sistemas</a>
+    <a href="https://es.wikipedia.org/wiki/Ext4">Wikipedia</a>
+    <a href="https://keepcoding.io/blog/glosario-7-protocolos-de-internet/">Protocolos-1</a>
+    <a href="https://www.siteground.es/tutoriales/email/protocolos-pop3-smtp-imap/">Protocolos-2</a>
+    <a href="https://ticgrup.com/los-comandos-cmd-que-deberias-conocer/">Comandos CMD</a>
+    <a href="https://ed.team/blog/10-comandos-linux-que-debes-conocer">Comandos Linux</a>
+    <a href="https://docs.oracle.com/cd/E24842_01/html/E22524/remotehowtoaccess-14.html">Comandos FTP</a>
+
+
+
 </footer>
 
 
